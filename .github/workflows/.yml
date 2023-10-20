@@ -1,1 +1,8 @@
-
+name: Deploy
+on: [push]
+jobs:
+  check-bats-version:
+  runs-on: ubuntu-latest
+  steps:
+    - uses: action/scheck@v3
+    - run: ech "Hello There!"
