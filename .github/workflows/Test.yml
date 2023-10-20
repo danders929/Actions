@@ -1,4 +1,4 @@
-name: reverse
+name: Test
 on:
   push:
   
@@ -14,5 +14,9 @@ jobs:
         with:
           node-version: '18'  
 
-      - name: Run a command
-        run: echo "Hello There!"
+      - name: Install NPM
+        run: npm install
+      - name: Install Jest
+        run: npm install -g jest
+      - name: Run Tests
+        run: npm run test
